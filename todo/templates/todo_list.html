@@ -10,7 +10,6 @@
     <h1>Things I need to do...</h1>
 
         <table>
-
             {% for item in items %}
             <tr>
                 {% if item.done %}
@@ -18,7 +17,11 @@
                 {% else %}
                 <td>{{ item.name }}</td>
                 {% endif %}
-            </tr>
+
+                <td>
+                    <form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form>
+                </td>
+            </tr> 
             {% empty %}
             <p>You have nothing to do.</p>
             {% endfor %}
