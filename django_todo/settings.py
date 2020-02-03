@@ -25,13 +25,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+# SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = "^vd7*aen51q#asv-^gzq^tznem$@c5_wqyqsgon8hup*77oyo#"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get("HOSTNAME"),
-                os.environ.get("ALLOWED_HOSTS")]
+                os.environ.get("https://8000-a90c5985-ec84-4b6a-8ddd-15105aee14be.ws-eu01.gitpod.io/")]
 
 # Application definition
 
@@ -86,7 +87,8 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 #     }
 # }
 
-DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+# DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+DATABASES = {'default': dj_database_url.parse("postgres://kiisrkpneteyto:480312cf64f8dddba391879d32b448da199840c9514fa502d07d79cfe6949bb8@ec2-54-195-252-243.eu-west-1.compute.amazonaws.com:5432/d68g7dldglt72l")}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
